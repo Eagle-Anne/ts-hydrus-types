@@ -1,0 +1,7 @@
+node_modules/*
+*.njsproj
+*.sln
+.vs/*
+bin/*
+obj/*
+package-lock.json

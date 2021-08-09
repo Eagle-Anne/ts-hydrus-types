@@ -1,0 +1,35 @@
+{
+  "name": "ts-hydrus-types",
+  "version": "18.0.0",
+  "private": true,
+  "author": "Eagle-Anne",
+  "description": "typescript types and guards for hydrus api",
+  "license": "AGPL-3.0-or-later",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "package.json",
+    "tsconfig.json",
+    "src/",
+    "dist/"
+  ],
+  "scripts": {
+    "make-type-guards": "ts-auto-guard --export-all",
+    "build": "npm run make-type-guards && tsc --build",
+    "clean": "tsc --build --clean",
+    "manual-prep": "npm run build"
+  },
+  "dependencies": {
+    "type-fest": "^1.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.10",
+    "ts-auto-guard": "^1.0.0-alpha.26",
+    "typescript": "^4.3.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://github.com/Eagle-Anne/ts-hydrus-types.git"
+  }
+}

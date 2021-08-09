@@ -2027,14 +2027,12 @@ export function isget_get_files_file_metadata_recieve(obj: any, _argumentName?: 
             e["known_urls"].every((e: any) =>
                 typeof e === "string"
             ) &&
-            Array.isArray(e["service_names_to_statuses_to_tags"]) &&
-            e["service_names_to_statuses_to_tags"].every((e: any) =>
-                isget_metadata_types(e) as boolean
-            ) &&
-            Array.isArray(e["service_names_to_statuses_to_display_tags"]) &&
-            e["service_names_to_statuses_to_display_tags"].every((e: any) =>
-                isget_metadata_types(e) as boolean
-            ) &&
+            (e["service_names_to_statuses_to_tags"] !== null &&
+                typeof e["service_names_to_statuses_to_tags"] === "object" ||
+                typeof e["service_names_to_statuses_to_tags"] === "function") &&
+            (e["service_names_to_statuses_to_display_tags"] !== null &&
+                typeof e["service_names_to_statuses_to_display_tags"] === "object" ||
+                typeof e["service_names_to_statuses_to_display_tags"] === "function") &&
             (isget_api_version_arguments(e["detailed_known_urls"]) as boolean ||
                 Array.isArray(e["detailed_known_urls"]) &&
                 e["detailed_known_urls"].every((e: any) =>

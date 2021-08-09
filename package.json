@@ -15,7 +15,7 @@
     "dist/"
   ],
   "scripts": {
-    "make-type-guards": "ts-auto-guard --export-all",
+    "make-type-guards": "ts-auto-guard-extended --export-all",
     "build": "npm run make-type-guards && tsc --build",
     "clean": "tsc --build --clean",
     "manual-prep": "npm run build"

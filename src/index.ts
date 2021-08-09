@@ -539,8 +539,8 @@ import { JsonObject, Merge, MergeExclusive } from 'type-fest';
                 is_local: boolean,
                 is_trashed: boolean,
                 known_urls: Array<string>,
-                service_names_to_statuses_to_tags: Array<get_metadata_types>,
-                service_names_to_statuses_to_display_tags: Array<get_metadata_types>,
+                service_names_to_statuses_to_tags: {[index:string]:get_metadata_types},
+                service_names_to_statuses_to_display_tags: { [index: string]: get_metadata_types; },
                 detailed_known_urls?: Array<get_add_urls_get_url_info_recieve>;
             }>;
     };
